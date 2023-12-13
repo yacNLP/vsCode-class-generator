@@ -1,6 +1,6 @@
 {
-  "name": "class-generator-yacine",
-  "displayName": "Class-generator-by-Yacine",
+  "name": "Form-generator-topaz",
+  "displayName": "Form generator Topaz",
   "description": "Description of your extension",
   "version": "0.0.1",
   "publisher": "Yacine HADDAD",
@@ -8,19 +8,19 @@
     "vscode": "^1.58.0"
   },
   "categories": ["Other"],
-  "activationEvents": ["onCommand:extension.generateClass"],
+  "activationEvents": ["onCommand:extension.generateForm"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.generateClass",
-        "title": "Generate Class"
+        "command": "extension.generateForm",
+        "title": "Generate Form"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.generateClass"
+          "command": "extension.generateForm"
         }
       ]
     }
@@ -29,6 +29,13 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "@types/node": "^20.8.9",
+    "fs": "0.0.1-security",
+    "ts-morph": "^20.0.0",
+    "typescript": "^5.2.2",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
